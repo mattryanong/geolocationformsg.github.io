@@ -61,7 +61,8 @@
       map.on("locationfound", onLocationFound);
 
       function onLocationError(e) {
-        alert(e.message);
+        // alert(e.message);
+        alert("Geolocation Error: Please turn on Location Services for your web browser.")
       }
 
       map.on("locationerror", onLocationError);
