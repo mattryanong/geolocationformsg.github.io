@@ -39,8 +39,8 @@
       crossorigin=""
     ></script>
     <script>
-      const formid = "624503ebecc91100121ad65f";
-      const fieldid = "62746e35f52c5f00138b39ab";
+      const params = new URLSearchParams(document.location.search);
+      const form = params.get("form")
 
       var map = L.map("map").setView([1.363, 103.817], 10);
 
@@ -78,7 +78,7 @@
         button.innerHTML = "Select this location";
 
         button.onclick = function () {
-          window.location.href = `https://form.gov.sg/${formid}?${fieldid}=${e.latlng.lng},${e.latlng.lat}`;
+          window.location.href = `${form}=${e.latlng.lat},${e.latlng.lng}`;
         };
 
         div.appendChild(button);
@@ -97,7 +97,7 @@
         button.innerHTML = "Select this location";
 
         button.onclick = function () {
-          window.location.href = `https://form.gov.sg/${formid}?${fieldid}=${e.latlng.lng},${e.latlng.lat}`;
+          window.location.href = `${form}=${e.latlng.lat},${e.latlng.lng}`;
         };
 
         div.appendChild(button);
