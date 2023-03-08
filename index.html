@@ -71,7 +71,7 @@
 
       function onMapClick(e) {
         const div = document.createElement("div");
-        div.innerHTML = `<p>You have selected this point at ${e.latlng.lat} and ${e.latlng.lng}</p>`;
+        div.innerHTML = `<p>You have selected this point at </br> ${e.latlng.lat}, ${e.latlng.lng}</p>`;
         div.className = "popup-container";
 
         const button = document.createElement("button");
